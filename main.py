@@ -136,3 +136,39 @@ list1 = ["зелене", "стигла", "червоний"]
 list2 = ["яблуко", "вишня", "томат"]
 for number, letter in zip(list1, list2):
     print(number, letter)
+
+numbers = {
+    1: "one",
+    2: "two",
+    3: "three"
+}
+
+for key in numbers:
+    print(key)
+
+
+for key in numbers.keys():
+    print(key)
+
+
+for val in numbers.values():
+    print(val)
+
+
+for key, value in numbers.items():
+    print(key, value)
+
+
+
+
+
+
+val = 'a'
+try:
+    val = int(val)
+except ValueError:
+    print(f"val {val} is not a number")
+else:
+    print(val > 0)
+finally:
+    print("This will be printed anyway")    
