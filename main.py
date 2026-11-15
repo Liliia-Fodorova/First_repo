@@ -110,3 +110,29 @@ while a < 6:
     if not a % 2:
         continue
     print(a)
+
+
+for i  in range(5):
+    print(i)
+
+
+for i in range(2, 10):
+    print(i)    
+
+
+
+for i in range(0, 10, 2):
+    print(i)    
+
+
+
+some_list = ["apple", "banana", "cherry"]
+for index, value in enumerate(some_list):
+    print(index, value)    
+
+
+
+list1 = ["зелене", "стигла", "червоний"]
+list2 = ["яблуко", "вишня", "томат"]
+for number, letter in zip(list1, list2):
+    print(number, letter)
