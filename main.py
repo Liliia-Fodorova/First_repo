@@ -172,3 +172,81 @@ else:
     print(val > 0)
 finally:
     print("This will be printed anyway")    
+
+
+
+
+def print_max(a: int, b: int):
+    if a > b:
+        print(a, 'максимально')
+    elif a == b:
+        print(a, 'дорівнює', b)
+    else:
+        print(b, 'максимально')
+
+print_max(3, 4)  # пряма передача значень
+
+x = 5
+y = 7
+print_max(x, y)  # передача змінних у якості аргументів
+
+
+
+
+def modify_string(original: str) -> str:
+    original = "змінено"
+    return original
+
+str_var = "оригінал"
+print(modify_string(str_var))  # виведе: змінено
+print(str_var) 
+
+
+
+def outer_func():
+    enclosing_var = "Я змінна в функції, що охоплює"
+
+    def inner_func():
+        print("Всередині вкладеної функції:", enclosing_var)
+
+    inner_func()
+
+outer_func()
+
+
+
+def greet(name, message="Привіт"):
+    print(f"{message}, {name}!")
+
+
+
+from datetime import datetime
+
+# Створення двох об'єктів datetime
+datetime1 = datetime(2023, 3, 14, 12, 0)
+datetime2 = datetime(2023, 3, 15, 12, 0)
+
+# Порівняння дат
+print(datetime1 == datetime2)  # False, тому що дати не однакові
+print(datetime1 != datetime2)  # True, тому що дати різні
+print(datetime1 < datetime2)   # True, тому що datetime1 передує datetime2
+print(datetime1 > datetime2)   # False, тому що datetime1 не наступає за datetime2
+
+
+from datetime import timedelta
+delta = timedelta(
+    days=50,
+    seconds=27,
+    microseconds=10,
+    milliseconds=29000,
+    minutes=5,
+    hours=8,
+    weeks=2
+)
+print(delta)
+
+
+
+import datetime
+now = datetime.datetime.now()
+print(now)
