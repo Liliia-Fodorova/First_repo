@@ -250,3 +250,67 @@ print(delta)
 import datetime
 now = datetime.datetime.now()
 print(now)
+
+
+from datetime import datetime
+
+# Створення об'єкта datetime
+now = datetime.now()
+
+# Отримання ISO календаря
+iso_calendar = now.isocalendar()
+
+print(f"ISO рік: {iso_calendar[0]}, ISO тиждень: {iso_calendar[1]}, ISO день тижня: {iso_calendar[2]}")
+
+
+#FOR 
+def string_to_codes(string: str) -> dict:
+    # Ініціалізація словника для зберігання кодів
+    codes = {}  
+    # Перебір кожного символу в рядку
+    for ch in string:  
+        # Перевірка, чи символ вже є в словнику
+        if ch not in codes:
+            # Додавання пари символ-код в словник  
+            codes[ch] = ord(ch)  
+    return codes
+
+
+
+import time
+
+start_time = time.perf_counter()
+
+for _ in range(1_000_000):
+    pass 
+
+
+end_time = time.perf_counter()
+
+execution_time = end_time - start_time
+print(f"Час виконання: {execution_time} секунд")
+
+
+
+
+cars = {
+    "Ford": 2008,
+    "BMW": 2020,
+    "VW": 2003,
+}
+
+for car in cars.items():
+    print(car[0])
+    print(car[1])
+
+    for model, year in cars.items():
+        print(model, year)
+
+
+
+ 
+
+import datetime
+now = datetime.datetime.now()
+
+print(now)        
