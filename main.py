@@ -314,3 +314,96 @@ import datetime
 now = datetime.datetime.now()
 
 print(now)        
+
+
+
+
+list_of_strings = ['Hello', 'world']
+result = ' '.join(list_of_strings)
+print(result)  
+
+clean = '   spacious   '.strip()
+print(clean)
+
+
+text = "Hello world"
+new_text = text.replace("world", "Python")
+print(new_text)
+
+
+
+number = "12345"
+print(number.isdigit())  # Виведе: True
+
+text = "Number123"
+print(text.isdigit())
+
+
+
+user_input = input("Введіть число: ")
+if user_input.isdigit():
+    print("Це дійсно число!")
+else:
+    print("Це не число!")
+
+
+import re
+
+text = "Моя електронна адреса: example@example.com"
+pattern = r"\w+@\w+\.\w+"
+match = re.search(pattern, text)
+
+if match:
+    print("Електронна адреса:", match.group())
+
+
+
+import re
+
+text = "Python - це проста, але потужна мова програмування."
+pattern = r"\w+"
+matches = re.findall(pattern, text)
+
+print(matches) 
+
+
+
+import re
+
+file_name = "Мій документ Python.txt"
+pattern = r"\s"
+replacement = "_"
+formatted_name = re.sub(pattern, replacement, file_name)
+
+print(formatted_name)  
+
+
+
+
+import re
+
+text = "Python - потужна; проста, універсальна: мова!"
+pattern = r"[;,\-:!\s]+"
+elements = re.split(pattern, text)
+
+print(elements)
+
+
+
+def find_max_vowels(text):
+    vowels = "aeiouy"
+    for char in text:
+        if char.lower() not in vowels:
+            text = text.replace(char, ".")
+
+    chains = text.split(".")
+
+    chains.sort(key=len)
+    max_seq = chains[-1]
+    return max_seq, len(max_seq)
+
+text = "A..o.a.e.e.ye.e asdse asaaaaa asdsad"
+max_seq, length = find_max_vowels(text)
+
+
+print(max_seq, length)        
