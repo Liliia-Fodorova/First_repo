@@ -407,3 +407,11 @@ max_seq, length = find_max_vowels(text)
 
 
 print(max_seq, length)        
+
+
+
+message = "asdfrdsatesdjhcgdycufydotiloxkaayuislka"
+
+sequences = re.findall(r"[aeiouy]+", message)
+max_seq = max(sequences, key=len)
+print(sequences)
