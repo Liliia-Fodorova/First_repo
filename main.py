@@ -340,11 +340,11 @@ print(text.isdigit())
 
 
 
-user_input = input("Введіть число: ")
-if user_input.isdigit():
-    print("Це дійсно число!")
-else:
-    print("Це не число!")
+# user_input = input("Введіть число: ")
+# if user_input.isdigit():
+#     print("Це дійсно число!")
+# else:
+#     print("Це не число!")
 
 
 import re
@@ -415,3 +415,42 @@ message = "asdfrdsatesdjhcgdycufydotiloxkaayuislka"
 sequences = re.findall(r"[aeiouy]+", message)
 max_seq = max(sequences, key=len)
 print(sequences)
+
+
+
+numbers = [0, 128, 255]
+byte_numbers = bytes(numbers)
+print(byte_numbers) 
+
+
+from pathlib import PurePath
+
+p = PurePath("/usr/bin/simple.jpg")
+print("Name:", p.name)  
+print("Suffix:", p.suffix) 
+print("Parent:", p.parent)
+
+
+from pathlib import Path
+
+p = Path("example.txt")
+p.write_text("Hello, world!")
+print(p.read_text()) 
+print("Exists:", p.exists()) 
+
+
+from pathlib import Path
+
+# Початковий шлях до файлу
+original_path = Path("documents/example.txt")
+
+# Зміна імені файлу
+new_path = original_path.with_name("report.txt")
+print(new_path)
+
+
+
+
+
+
+
