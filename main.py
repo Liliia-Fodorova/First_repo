@@ -451,6 +451,37 @@ print(new_path)
 
 
 
+def say_hello(name):
+    print(f'Hello, {name}')
+
+print("You imported hello.py")
+say_hello('user')
 
 
+import sys
+import os
 
+print(sys.modules["os"])
+
+import sys
+import os
+
+print(sys.modules.keys())
+
+
+import sys
+
+for arg in sys.argv:
+    print(arg)
+
+import sys
+
+def main():
+    if len(sys.argv) > 1:
+        print(sys.argv[1])
+
+if __name__ == "__main__":
+    main()  
+
+
+  
